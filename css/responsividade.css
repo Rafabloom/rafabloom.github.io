@@ -502,7 +502,6 @@
         min-height: 160px;
         border-radius: 22px;
         resize: none;
-        width: calc(80% + 20px);
     }
 
     #enviar,
@@ -850,7 +849,7 @@
     /* -- SEÇÃO CONTATO -- */
     textarea.input,
     .dark-mode textarea.input {
-        width: calc(90% - 40px);
+        width: calc(80% + 20px);
     }
 }
 
