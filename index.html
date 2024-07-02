@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT AWESOME - ICONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- DEVICONS - ICONES-->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <!-- ESTILO CUSTOMIZADO -->
+    <link rel="stylesheet" type="text/css" href="./css/estilo.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="portifolio-arquivos/Favicon.svg" type="image/svg+xml">
+
+    <!-- FONTE CUSTOMIZADA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Rafael Santos Matos | UI Design & Frontend</title>
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO + MENU -->
+    <header>
+
+        <nav id="header">
+
+            <a href="#home">
+                <img class="logo" src="portifolio-arquivos/logo-light.svg" alt="Rafael Matos">
+            </a>
+
+            <ul class="nav-menu" id="navbarNav">
+                <li><a class="link-ativo" href="#home">Home</a></li>
+                <li><a href="#experiencias">Experiências</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+            <input type="checkbox" id="darkmode-toggle">
+            <label for="darkmode-toggle" class="btn-darklight">
+                <svg class="sun" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="iconify iconify--noto"
+                    viewBox="0 0 128 128">
+                    <path fill="#fcc11a" d="M37 42c-9 12-9 35 3 46 14 12 34 12 47 0a34 34 0 1 0-49-47z" />
+                    <path fill="#fee269" d="M53 38c-4-2-8 3-10 6s-3 9 1 11c3 1 6-1 9-6s4-9 0-11z" />
+                    <path fill="#ffa722"
+                        d="M63 20c-1 2-1 3 1 4l15 2 1-2-3-20c0-2-2-3-3-1L63 20zM93 32c-2 1-2 2-1 3l8 13 3-1 12-17c2-2 1-3-1-3l-21 5zM107 62c-2-1-3-1-4 1l-2 15c0 1 0 2 2 2l20-4c2 0 3-2 1-4l-17-10zM92 91c1-1 3-1 3 1l5 21c0 1-1 2-3 2l-18-13c-1-1 0-2 1-3l12-8zM50 99a2144 2144 0 0 1 1 23c0 3 2 4 3 2l11-18c2-3 1-3-1-4l-14-3zM24 79c1-2 3-1 4 0l8 12c1 1 1 2-1 3l-20 5c-2 0-4-2-2-4l11-16zM21 64c2 1 3 0 4-1l2-14c0-2 0-3-3-3L4 50c-2 0-2 3 0 4l17 10zM48 27v-3L31 11c-2-1-4-1-3 2l5 21c0 1 2 2 3 1l12-8z" />
+                </svg>
+                <svg class="moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path fill="#363853"
+                        d="M18.842 3.266a.4.4 0 0 0-.754 0l-.431 1.218a.4.4 0 0 1-.244.243l-1.217.431a.4.4 0 0 0 0 .754l1.217.431a.4.4 0 0 1 .244.244l.43 1.217a.4.4 0 0 0 .755 0l.431-1.217a.4.4 0 0 1 .243-.244l1.218-.43a.4.4 0 0 0 0-.755l-1.218-.431a.4.4 0 0 1-.243-.243l-.431-1.218ZM14.148 7.24a.276.276 0 0 1 .52 0l.239.671c.027.079.09.14.168.168l.67.238a.276.276 0 0 1 0 .52l-.67.239a.276.276 0 0 0-.168.168l-.238.67a.276.276 0 0 1-.521 0l-.238-.67a.276.276 0 0 0-.168-.168l-.67-.238a.276.276 0 0 1 0-.52l.67-.239a.276.276 0 0 0 .168-.168l.238-.67ZM16.77 10.221a.184.184 0 0 1 .347 0l.159.447c.018.053.06.094.112.113l.447.158a.184.184 0 0 1 0 .347l-.447.159a.185.185 0 0 0-.112.112l-.159.447a.184.184 0 0 1-.347 0l-.158-.447a.185.185 0 0 0-.112-.112l-.448-.159a.184.184 0 0 1 0-.347l.448-.158a.185.185 0 0 0 .112-.113l.158-.447Z" />
+                    <path fill="#363853"
+                        d="M11.135 4.65a.76.76 0 0 1-.067.853 5.886 5.886 0 0 0-1.3 3.691c0 3.314 2.77 6.037 6.233 6.037.952 0 1.851-.206 2.655-.573a.76.76 0 0 1 1.023.973C18.424 18.781 15.287 21 11.628 21 6.885 21 3 17.256 3 12.593c0-4.242 3.216-7.724 7.367-8.318a.76.76 0 0 1 .768.376Z" />
+                </svg>
+            </label>
+
+
+            <div class="nav-toggle">
+                <i class="fa-solid fa-bars-staggered" onclick="myMenuFunction()"></i>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- Tela de carregamento -->
+    <div id="loader" class="loading">
+        <div class="loader"></div>
+    </div>
+
+    <!-- CONTAINER -->
+    <main class="container">
+
+        <!-- SEÇÃO HOME -->
+        <section id="home" class="home" aria-label="Home">
+
+            <div class="caixa-destaque">
+                <div class="nome-destacado">
+                    <p>Olá! Eu sou <br>
+                        <span class="textoDigitado">
+                        </span>
+                    </p>
+                </div>
+                <div class="informacoes-destaque">
+                    <p>Estou empenhado em me tornar um desenvolvedor Full-Stack altamente
+                        qualificado, com foco especial nos estudos de Front-end neste momento.
+                    </p>
+                </div>
+
+                <div>
+                    <a href="https://drive.google.com/uc?export=download&id=1-rhBD8Q_zKB4qjnH2SppR-1Sx7eg0RTz" download>
+                        <button class="btn-download">
+                            Download CV
+                            <i class="fa-solid fa-download"></i>
+                            <div id="loader-download" class="loader"></div>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- ICONES REDES SOCIAIS -->
+                <div class="rede-social">
+                    <a href="https://wa.me/5511996872933/" class="social-whatsapp" title="Ir para o WhatsApp"
+                        target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rafael-santos-matos-570a14181/" class="social-linkedin"
+                        title="Ir para o LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Rafabloom" class="social-github" title="Ir para o GitHub"
+                        target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/rafaleemattos/" class="social-instagram"
+                        title="Ir para o Instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- FOTO PARA PORTFOLIO -->
+            <div class="container-foto">
+                <div class="foto sombra-interna">
+                    <img src="imagens/perfil.png" alt="foto de perfil do Rafael Matos">
+                </div>
+            </div>
+
+        </section> <!-- FIM SEÇÃO HOME -->
+
+        <!-- INÍCIO SEÇÃO EXPERIÊNCIAS -->
+        <section id="experiencias" class="experiencias" aria-label="Experiências">
+
+            <!-- SELO ESQUERDO E DIREITO -->
+            <div class="selo esquerdo"></div>
+            <div class="selo direito"></div>
+
+            <!-- CONTEÚDO PRINCIPAL -->
+            <div>
+                <h1 class="titulo">Experiências</h1>
+
+                <p class="textos">
+                    Tenho desenvolvido pequenos projetos, como o
+                    <a href="https://rafabloom.github.io/projeto_despesa/index.html" target="_blank"
+                        rel="noopener noreferrer">we.control</a>, utilizando
+                    <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>. Além disso, apliquei
+                    essas tecnologias no desenvolvimento do aplicativo web
+                    <a href="https://rafabloom.github.io/appmatainsetos/" target="_blank" rel="noopener noreferrer">Caça
+                        aos Insetos</a>. Para alguns desses projetos, também trabalhei no
+                    <strong>UI/UX Design</strong> utilizando a ferramenta Figma.
+
+                    Embora eu ainda não possua experiência profissional formal na área de programação, estou em busca da
+                    minha primeira oportunidade para aplicar e expandir minhas habilidades.
+                </p>
+
+                <!-- INFORMAÇÕES EXPERIÊNCIAS (lado esquerdo) -->
+                <div class="container-retangulo">
+                    <div class="borda-retangulo">
+                        <h1>
+                            Janeiro 2021<br>
+                            -<br>
+                            abril 2022
+                        </h1>
+                    </div>
+                    <div class="retangulo">
+                        <div class="coluna">
+                            <h2>Jovem Aprendiz Administrativo<br> Henkel - Itapevi</h2>
+                            <h3>Terceirizado pela NURAP</h3>
+                            <div class="cracha esquerdo"></div>
+                        </div>
+
+                        <div class="coluna">
+                            <h2 class="centralizar">Atividades</h2>
+                            <ul>
+                                <li>Desenvolvi habilidades em gestão de tempo, resolução de problemas e comunicação.
+                                </li>
+                                <li>Elaboração e controle de planilhas de planejamento.</li>
+                                <li>Equipe se aprimorou em metodologias como Lean, 5S e Kanban.</li>
+                                <li>Gerenciei documentos e atendi clientes internos e externos.</li>
+                                <li>Realizei tarefas administrativas, contribuindo para a eficiência do escritório.</li>
+                                <li>Auxílio na abertura e fechamento de OS na plataforma Máximo da Sodexo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INFORMAÇÕES EXPERIÊNCIAS (lado direito) -->
+                <div class="container-retangulo-direita">
+                    <div class="borda-retangulo-direita">
+                        <h1>
+                            maio 2022<br>
+                            -<br>
+                            julho 2023
+                        </h1>
+                    </div>
+                    <div class="retangulo-direito">
+                        <div class="coluna2">
+                            <h2>Auxiliar Administrativo<br> Henkel - Itapevi</h2>
+                            <h3>Terceirizado pela SODEXO</h3>
+                            <div class="cracha direito"></div>
+                        </div>
+
+                        <div class="coluna2">
+                            <h2 class="centralizar-direita">Atividades</h2>
+                            <ul>
+                                <li>Equipe aplicou metodologias como Lean, 5S e Kanban.</li>
+                                <li>Elaboração de planilhas de planejamento e controle de estoque no SAP.</li>
+                                <li>Auxílio na abertura/fechamento de OS e requisições de compras no SAP/SAP Ariba.</li>
+                                <li>Recebimento de materiais, acompanhamento de serviços e entrada de notas fiscais no
+                                    SAP.</li>
+                                <li>Participação na equipe de 5S em autoauditorias semanais.</li>
+                                <li>Suporte a programadores e cadastro de peças no SAP.</li>
+                                <li>Utilização diária do pacote Office (PowerPoint, Word, Excel).</li>
+                                <li>Reuniões diárias para planejamento e feedback de tarefas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+        </section> <!-- FIM SEÇÃO EXPERIÊNCIAS -->
+
+
+        <section id="formacao" class="formacao" aria-label="Formação"> <!-- INÍCIO SEÇÃO FORMAÇÃO -->
+
+            <h1 class="titulo">Formação</h1>
+
+            <div class="livro"></div>
+
+            <p class="textos">
+                Formei-me em Publicidade e Propaganda em 2022.
+
+                Minhas experiências acadêmicas recentemente, são cursos online focados em programação e design. Estou
+                aprendendo <strong>React</strong> e <strong>TypeScript</strong>, além de aprimorar minhas habilidades em
+                UI/UX Design com o Figma. Esses
+                cursos me deram uma base sólida em tecnologia e design, permitindo-me criar projetos atraentes e
+                funcionais.
+            </p>
+
+            <div class="carousel-wrapper">
+                <button class="seta seta-esquerda">
+                    <img class="seta-imagem-esquerda" src="portifolio-arquivos/setaesquerda-formacao-light.svg"
+                        alt="Seta Esquerda">
+                </button>
+
+                <div class="carousel-container"> <!-- INÍCIO CERTIFICADOS -->
+                    <div class="carousel" id="carousel-certificados">
+                        <div class="certificados">
+                            <h3>Bacharel</h3>
+                            <h2>Comunicação Social Publicidade e Propaganda</h2>
+                            <h4>FAPCOM</h4>
+                            <a href="https://drive.google.com/file/d/1_gqLnZRiZ0-NN7Hpu-WYArobnHEmuI4_/view"
+                                target="_blank" rel="noopener noreferrer">Ver certificado</a>
+                        </div>
+
+                        <div class="certificados-azul">
+                            <h3>Curso Online</h3>
+                            <h2>Desenvolvimento Web Completo - 20 cursos + 20 projetos</h2>
+                            <h4>UDEMY</h4>
+                            <div class="certificado-progresso">
+                                <div class="balao-fala">Concluí 55% do curso, focando nas partes de frontend. Pausarei
+                                    temporariamente para me especializar em frontend antes de retornar aos módulos de
+                                    backend.</div>
+                                <div class="texto-acima">Passe o mouse (ou clique) para saber mais...</div>
+                                <div class="barra-progresso" onmouseover="showBalaoFala()" onmouseout="hideBalaoFala()">
+                                    <div class="progresso" style="width: 55%;"></div>
+                                </div>
+                                <div class="texto-abaixo">55% concluído</div>
+                            </div>
+                        </div>
+
+                        <div class="certificados-azul">
+                            <h3>Curso Online</h3>
+                            <h1>UI Design para Iniciantes</h1>
+                            <h4>ORIGAMID</h4>
+                            <a href="https://www.origamid.com/certificate/d4f3c360" target="_blank"
+                                rel="noopener noreferrer">Ver certificado</a>
+                        </div>
+
+                        <div class="certificados-azul">
+                            <h3>Curso Online</h3>
+                            <h1>HTML e CSS para Iniciantes</h1>
+                            <h4>ORIGAMID</h4>
+                            <a href="#" target="_blank" rel="noopener noreferrer">Ver certificado</a>
+                        </div>
+
+                        <div class="certificados-azul">
+                            <h3>Curso Online</h3>
+                            <h1>CSS Flexbox</h1>
+                            <h4>ORIGAMID</h4>
+                            <a href="#" target="_blank" rel="noopener noreferrer">Ver certificado</a>
+                        </div>
+
+                        <div class="certificados-azul">
+                            <h3>Curso Online</h3>
+                            <h1>CSS Grid Layout</h1>
+                            <h4>ORIGAMID</h4>
+                            <a href="#" target="_blank" rel="noopener noreferrer">Ver certificado</a>
+                        </div>
+                    </div>
+                </div> <!-- FIM CERTIFICADOS -->
+
+                <button class="seta seta-direita">
+                    <img class="seta-imagem-direita" src="portifolio-arquivos/seta-formacao-light.svg"
+                        alt="Seta Direita">
+                </button>
+            </div>
+
+
+
+        </section> <!-- FIM SEÇÃO FORMAÇÃO -->
+
+        <section id="projetos" class="projetos"> <!-- INÍCIO SEÇÃO PROJETOS -->
+            <h1 class="titulo">Projetos</h1>
+            <div class="container-projetos">
+                <div class="projeto ativo">
+                    <a href="https://rafabloom.github.io/portf-lio-Duda-1.0/" target="_blank">
+                        <img src="imagens/portifolio-maria.png" alt="Projeto Portifólio Maria Eduarda">
+                        <h3>Portifólio Maria Eduarda</h3>
+                        <div class="informacoes-projeto">
+                            <h4>Projeto feito usando HTML, CSS e Javascript</h4>
+                            <p>Projeto feito do zero em um evento da DevEmDobro, chamado Do Zero ao Programador
+                                Contratado, personalizado e feito com ideias originais, projeto feito para fins de
+                                estudo.</p>
+                            <h4>🧷 Ver no GitHub Pages</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="projeto ativo">
+                    <a href="https://rafabloom.github.io/appmatainsetos/index.html" target="_blank">
+                        <img src="imagens/appmatainseto.png" alt="Projeto Jogo Caça aos Insetos">
+                        <h3>Jogo Caça aos Insetos</h3>
+                        <div class="informacoes-projeto">
+                            <h4>Projeto feito usando HTML, CSS e Javascript</h4>
+                            <p>Projeto realizado juntamente ao curso, feito com ideias originais, onde algumas das artes
+                                foram criadas utilizando Adobe Fireworks somente para este objetivo, projeto realizado
+                                para fins de estudo.</p>
+                            <h4>🧷 Ver no GitHub Pages</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="projeto ativo">
+                    <a href="https://rafabloom.github.io/projeto_despesa/index.html" target="_blank">
+                        <img src="imagens/registro-despesas.png" alt="Projeto de Registro de Despesas">
+                        <h3>We.Control - Despesas</h3>
+                        <div class="informacoes-projeto">
+                            <h4>Projeto feito usando HTML, CSS e Javascript</h4>
+                            <p>Projeto realizado juntamente ao curso, feito com ideias originais, onde algumas das artes
+                                foram criadas utilizando Adobe Fireworks somente para este objetivo, projeto realizado
+                                para fins de estudo.</p>
+                            <h4>🧷 Ver no GitHub Pages</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="projeto ativo">
+                    <a href="#projeto4" target="_blank">
+                        <img src="https://via.placeholder.com/515x700.png/0062ff/ffffff?Text=515x700" alt="Projeto 4">
+                        <h3>BLOOM's - Loja de Skate</h3>
+                        <div class="informacoes-projeto">
+                            <h4>Projeto feito usando HTML, CSS e Javascript</h4>
+                            <p>Projeto</p>
+                            <h4>🧷 Ver no GitHub Pages</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="projeto">
+                    <a href="#projeto5" target="_blank">
+                        <img src="https://via.placeholder.com/515x700.png/0062ff/ffffff?Text=515x700" alt="Projeto 5">
+                        <h3>Projeto 5</h3>
+                        <div class="informacoes-projeto">
+                            <h4>Projeto feito usando HTML, CSS e Javascript</h4>
+                            <p>Projeto</p>
+                            <h4>🧷 Ver no GitHub Pages</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="projeto">
+                    <a href="#projeto5" target="_blank">
+                        <img src="https://via.placeholder.com/515x700.png/0062ff/ffffff?Text=515x700" alt="Projeto 6">
+                        <h3>Projeto 6</h3>
+                        <div class="informacoes-projeto">
+                            <h4>Projeto feito usando HTML, CSS e Javascript</h4>
+                            <p>Projeto</p>
+                            <h4>🧷 Ver no GitHub Pages</h4>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <button class="btn-mostrar-projetos">Mostrar mais</button>
+
+        </section> <!-- FIM SEÇÃO PROJETOS -->
+
+        <section id="contato" class="contato"> <!-- INÍCIO SEÇÃO CONTATO -->
+            <h1 class="titulo">Contato</h1>
+            <div class="contato-container">
+                <div class="contato-informacoes">
+                    <h2>Entre em contato:</h2>
+                    <p>Email: rafinha_matos5@hotmail.com</p>
+                    <p class="dados-email">rafinha_matos5@hotmail.com</p>
+                    <button class="btn-email copy-email" onclick="copiarEmail()">
+                        Copiar E-mail <i class="fas fa-copy"></i>
+                    </button>
+                    <div class="whats-container">
+                        <i class="fa-brands fa-whatsapp whats-contato"></i>
+                        <h3>11 99687-2933</h3>
+                    </div>
+                </div>
+                <div class="contato-form">
+                    <h2>Seu Feedback é Bem-vindo!</h2>
+                    <p>Estou sempre aberto a novas oportunidades, colaborações e feedbacks. Se você tiver alguma dúvida,
+                        proposta ou apenas quiser bater um papo sobre tecnologia, design ou projetos, não hesite em
+                        entrar em contato.</p>
+
+                    <!-- Formulário de Contato -->
+                    <form id="formulario-contato" action="https://formsubmit.co/rafinha_matos5@hotmail.com"
+                        method="POST" autocomplete="off">
+                        <div class="input-container">
+                            <input type="text" id="name" name="name" class="input" required>
+                            <label for="">Digite seu nome</label>
+                            <span>Digite seu nome</span>
+                            <div class="input-overlay"></div>
+                        </div>
+                        <div class="input-container">
+                            <input type="email" name="email" class="input" required>
+                            <label for="">E-mail</label>
+                            <span>E-mail</span>
+                            <div class="input-overlay"></div>
+                        </div>
+                        <div class="input-container">
+                            <input type="text" id="telefone" name="telefone" class="input" required maxlength="15"
+                                oninput="formatarTelefone(this)">
+                            <label for="">Número de telefone</label>
+                            <span>Número de telefone</span>
+                            <div class="input-overlay"></div>
+                        </div>
+                        <div class="input-container textarea">
+                            <textarea name="mensagem" class="input" required></textarea>
+                            <label for="">Mensagem</label>
+                            <span>Mensagem</span>
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/#contato" />
+                        </div>
+                        <button type="submit" id="enviar">
+                            Enviar
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section> <!-- FIM SEÇÃO CONTATO -->
+
+    </main>
+
+    <!-- INÍCIO SEÇÃO FOOTER (RODAPÉ) -->
+    <footer>
+        <div class="fundo">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" width="100%" height="100%" viewBox="0 0 2000 900">
+                <defs>
+                    <path id="onda" fill="#3edcff"
+                        d="M-323.852,402.589c0,0,236.988-41.997,505.475,0
+                        s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z" />
+                </defs>
+                <g>
+                    <use xlink:href="#onda" opacity=".4">
+                        <animateTransform attributeName="transform" attributeType="XML" type="translate" dur="8s"
+                            calcMode="spline" values="270 230; -334 180; 270 230" keyTimes="0; .5; 1"
+                            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0" repeatCount="indefinite" />
+                    </use>
+                    <use xlink:href="#onda" opacity=".6">
+                        <animateTransform attributeName="transform" attributeType="XML" type="translate" dur="6s"
+                            calcMode="spline" values="-270 230;243 220;-270 230" keyTimes="0; .6; 1"
+                            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0" repeatCount="indefinite" />
+                    </use>
+                    <use xlink:href="#onda" opacity=".9">
+                        <animateTransform attributeName="transform" attributeType="XML" type="translate" dur="4s"
+                            calcMode="spline" values="0 230;-140 200;0 230" keyTimes="0; .4; 1"
+                            keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0" repeatCount="indefinite" />
+                    </use>
+                </g>
+            </svg>
+        </div>
+        <section class="conteudo">
+            <a href="#home">
+                <img class="logo-footer" src="portifolio-arquivos/logo-light.svg" alt="Rafael Matos">
+            </a>
+            <div class="meio-rodape">
+                <div class="icons">
+                    <i class="devicon-html5-plain-wordmark colored"></i>
+                </div>
+
+                <div class="icons">
+                    <i class="devicon-css3-plain-wordmark colored"></i>
+                </div>
+
+                <div class="icons">
+                    <i class="devicon-bootstrap-plain colored"></i>
+                </div>
+
+                <div class="icons">
+                    <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg">
+                </div>
+                <div class="icons">
+                    <i class="devicon-git-plain colored"></i>
+                </div>
+                <div class="icons-opac">
+                    <i class="devicon-react-original-wordmark colored"></i>
+                </div>
+
+                <div class="icons-opac">
+                    <i class="devicon-typescript-plain colored"></i>
+                </div>
+
+                <div class="icons-opac">
+                    <i class="devicon-nodejs-plain-wordmark colored"></i>
+                </div>
+            </div>
+            <div class="rede-social">
+                <a href="https://wa.me/5511996872933/" class="social-whatsapp" title="Ir para o WhatsApp"
+                    target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rafael-santos-matos-570a14181/" class="social-linkedin"
+                    title="Ir para o LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Rafabloom" class="social-github" title="Ir para o GitHub" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/rafaleemattos/" class="social-instagram" title="Ir para o Instagram"
+                    target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div class="baixo-rodape">
+                <p>Copyright &copy; <a href="#home">Rafael Matos</a> - Todos os direitos
+                    reservados - 2024
+                </p>
+            </div>
+        </section>
+    </footer> <!-- FIM SEÇÃO FOOTER (RODAPÉ) -->
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- SWEETALERT2 BIBLIOTECA -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="JS/script.js"></script>
+
+    <!-- ----- DARK MODE JS ----- -->
+    <script src="JS/dark-mode.js"></script>
+
+</body>
+
+</html>

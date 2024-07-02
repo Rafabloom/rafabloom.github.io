@@ -1,0 +1,119 @@
+/* ------- SEÇÃO PROJETOS ----- */
+.projetos {
+    gap: 80px;
+    width: 90%;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 100px;
+}
+
+.container-projetos {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 120px;
+    margin-bottom: 100px;
+}
+
+.projeto {
+    max-width: 300px;
+    height: 100%;
+    position: relative;
+    display: none;
+}
+
+.projeto.ativo {
+    display: block;
+}
+
+.projeto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+    display: block;
+}
+
+.projeto h3 {
+    background: #00ceff;
+    width: 100%;
+    height: 10%;
+    padding: 10px 5px;
+    margin: 0;
+    color: #141414;
+    text-align: center;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0;
+}
+
+.projeto a {
+    text-decoration: none;
+}
+
+.informacoes-projeto {
+    background-color: rgba(0, 14, 42, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 20px 20px 0 0;
+    color: #fff;
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+.informacoes-projeto p {
+    margin-bottom: 10px;
+}
+
+.projeto:hover .informacoes-projeto {
+    opacity: 0.9;
+}
+
+.btn-mostrar-projetos {
+    background: #81e7ff;
+    border: 3px solid #005063;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    padding: 15px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: "Dosis", sans-serif;
+    transition: transform 0.7s ease, background 1.3s ease;
+    cursor: pointer;
+    margin-bottom: 120px;
+}
+
+.projetos .btn-mostrar-projetos:hover {
+    background-color: #005063;
+    color: #06f;
+    font-weight: 600;
+    background-image: linear-gradient(to right, transparent 50%, #81e7ff 50%);
+    background-position: 100%;
+    background-size: 200% 100%;
+}
+
+.projetos .btn-mostrar-projetos.remove {
+    display: none;
+}
+
+.projetos h4 {
+    margin: 10px 0;
+}
+
+.projetos p {
+    font-size: 0.9rem;
+}

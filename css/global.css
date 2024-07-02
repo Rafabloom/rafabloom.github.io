@@ -1,0 +1,53 @@
+/* -- ESTILOS GERAIS -- */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: "Fira Sans", Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #a0ecff, #e5faff 80%, #a0ecff 100%);
+    background-size: 100% 200%;
+    color: #141414;
+}
+
+html.dark-mode, body.dark-mode {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #0D2072, #1338DD 80%, #0D2072 100%);
+    background-size: 100% 200%;
+    font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+p {
+    font-weight: 400;
+}
+
+ul {
+    list-style: none;
+}
+
+#header {
+    height: 90px;
+    line-height: 90px;
+}
+
+.container{
+    padding-inline: 2vw;
+}
+
+.titulo {
+    font-weight: 700;
+    text-align: center;
+    font-size: 3.7rem;
+    text-transform: uppercase;
+    color: #4900a2;
+    margin-bottom: 70px;
+}
+
+.dark-mode .titulo {
+    color: #c599fb;
+}

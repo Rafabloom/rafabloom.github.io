@@ -1,0 +1,113 @@
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    top: 0;
+    left: 0;
+    line-height: 90px;
+    padding-inline: 5vw;
+    z-index: 9999;
+    transition: 0.3s;
+    align-items: center;
+    list-style-type: none;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+    background: #81e7ff;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 60px;
+    overflow-x: hidden;
+}
+
+.nav-menu a {
+    font-size: 1.125rem;
+    line-height: 1.3;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #0066FF;
+    font-weight: 700;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #8b2cff, #4900A2);
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.nav-menu a:hover {
+    color: #4900A2;
+}
+
+.nav-menu a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-menu li a.link-ativo {
+    color: #4900A2;
+}
+
+.nav-menu li a.link-ativo:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #8b2cff, #4900A2);
+    transform: scaleX(1);
+}
+
+.logo {
+    display: flex;
+    width: 100px;
+    font-weight: 800;
+    transition: transform 0.2s ease-in-out;
+    left: -20px;
+    font-size: 5em;
+    position: relative;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* -- MENU HAMBURGER -- */
+.nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #0D2072;
+    border: 3px solid #0D2072;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.nav-toggle:hover {
+    background: #5a9cff;
+    border-color: #0D2072;
+    animation: pulse 1.4s infinite alternate;
+}
+
+.nav-toggle i {
+    transition: transform 0.5s ease;
+}
+
+.fa-xmark {
+    transform: rotate(180deg);
+}

@@ -1,0 +1,260 @@
+.contato {
+    width: 90%;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.contato-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    padding-top: 40px;
+}
+
+.contato-informacoes {
+    width: 339px;
+    border-radius: 20px 0 0 20px;
+    box-shadow: 0 0 4px 0 #06f;
+    background: #a0ecff;
+    padding: 20px;
+    box-sizing: border-box;
+    align-self: center;
+}
+
+.contato-form {
+    width: 711px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 0 0 4px 0 #06f;
+    background: #00ceff;
+    padding: 20px;
+}
+
+.contato-informacoes h2 {
+    text-align: center;
+}
+
+.contato-informacoes h3 {
+    margin: 10px;
+}
+
+.contato-informacoes p {
+    font-size: 0.7rem;
+    margin: 20px 20px;
+    align-self: flex-start;
+    text-align: justify;
+    color: #3d3d3d;
+}
+
+.contato-form h2 {
+    text-align: start;
+    margin: 20px;
+    align-self: flex-start;
+}
+
+.contato-form p {
+    margin: 20px 20px 40px 20px;
+    align-self: flex-start;
+    text-align: justify;
+    color: #3d3d3d;
+}
+
+.btn-email {
+    padding: 10px 15px;
+    border: 2px solid #005063;
+    border-radius: 10px;
+    background-color: #00ceff;
+    font-size: 0.8rem;
+    transition: background-color 0.3s, transform 0.3s ease;
+    margin: 0 20px;
+    font-weight: 700;
+}
+
+.btn-email .fas.fa-copy {
+    margin-left: 5px;
+}
+
+.btn-email:hover {
+    background-color: #005063;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.dados-email {
+    display: none;
+}
+
+.input-container {
+    position: relative;
+    margin: 20px;
+    width: 100%;
+}
+
+.input {
+    border: 2px solid #005063;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+}
+
+.input:focus {
+    border-color: #8b2cff;
+    box-shadow: 0 0 4px 0 #4900A2;
+}
+
+textarea.input {
+    padding: 0.8rem 1.2rem;
+    min-height: 150px;
+    border-radius: 22px;
+    resize: none;
+    overflow-y: auto;
+    width: calc(90% - 20px);
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    padding: 0 0.4rem;
+    color: #0e0e0e;
+    font-size: 0.8rem;
+    font-weight: 400;
+    pointer-events: none;
+    z-index: 1000;
+    transition: 0.5s;
+    background-color: #00ceff;
+    border-radius: 10px;
+}
+
+.input-container.textarea label {
+    top: 1rem;
+    transform: translateY(0);
+}
+
+.input:focus + label {
+    color: #4900a2;
+    font-weight: 700;
+}
+
+.input-container.focus label {
+    top: 0;
+    transform: translateY(-50%);
+    left: 25px;
+    font-size: 0.8rem;
+}
+
+#enviar {
+    padding: 0.6rem 1rem;
+    background-color: #fff;
+    border: 2px solid #fafafa;
+    font-size: 0.9rem;
+    color: #06F;
+    line-height: 1;
+    border-radius: 25px;
+    outline: none;
+    transition: 0.3s;
+    margin-left: 80%;
+}
+
+#enviar i {
+    margin-left: 5px;
+}
+
+#enviar:hover {
+    background-color: #06F;
+    color: #fff;
+    font-weight: bold;
+}
+
+#enviar:hover>.fas.fa-paper-plane {
+    animation: flying-paper 2s ease forwards;
+}
+
+@keyframes flying-paper {
+    0% {
+        transform: rotate(0deg) translate(0, 0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotate(45deg) translate(-20px, -20px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: rotate(90deg) translate(-40px, -40px);
+        opacity: 0;
+    }
+}
+
+.input-container span {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    padding: 0 0.4rem;
+    color: transparent;
+    pointer-events: none;
+    z-index: 500;
+}
+
+.input-container span:before,
+.input-container span:after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    opacity: 0;
+    transition: 0.3s;
+    height: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-container span:before {
+    left: 50%;
+}
+
+.input-container span:after {
+    right: 50%;
+}
+
+.input-container.focus span:before,
+.input-container.focus span:after {
+    width: 50%;
+    opacity: 1;
+}
+
+.whats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.whats-contato {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    padding: 12px;
+    font-size: 1.4rem;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 48px;
+    color: #fff;
+    border: 2px solid #06692a;
+    background-color: #0aa242;
+    box-shadow: 0 0 0 1px rgb(0, 90, 4);
+}

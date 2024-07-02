@@ -1,0 +1,171 @@
+/* ------- SEÇÃO HOME ----- */
+
+.home {
+    display: flex;
+    gap: 80px;
+    width: 90%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* -- CAIXA DE TEXTO EM DESTAQUE -- */
+.caixa-destaque {
+    position: relative;
+    display: flex;
+    min-height: 50vh;
+    flex-direction: column;
+    width: 50%;
+}
+
+/* -- NOME DESTACADO -- */
+.nome-destacado p {
+    font-size: 3.125rem;
+    font-weight: 700;
+    margin-block: 20px;
+}
+
+/* -- TEXTO DIGITADO -- */
+.textoDigitado {
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 4.5rem;
+    color: #0066FF;
+}
+
+/* -- INFORMAÇÕES DO TEXTO DESTACADO -- */
+.informacoes-destaque {
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+}
+
+/* -- BOTÃO DE DOWNLOAD DE CURRÍCULO -- */
+.btn-download {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    color: #0066FF;
+    background: #edfbff;
+    border: 2px solid #0066FF;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: color 0.5s;
+    margin-bottom: 60px;
+}
+
+.btn-download>i {
+    margin-left: 10px;
+}
+
+.btn-download:hover {
+    background: #0066FF;
+    color: #fff;
+}
+
+/* -- ÍCONES REDES SOCIAIS -- */
+
+.rede-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.rede-social a {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #0066FF;
+    border: 2px solid #0066FF;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Cores e animações específicas para cada ícone de mídia social */
+.social-whatsapp:hover {
+    color: #fff;
+    border: 2px solid #06692a;
+    background-color: #0aa242;
+    box-shadow: 0 0 6px rgba(4, 110, 9, 1);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.social-linkedin:hover {
+    color: #0574af;
+    border: 2px solid #0574af;
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(10, 62, 97, 1);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.social-github:hover {
+    color: #000000;
+    background-color: #fff;
+    border: 2px solid #000;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 1);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.social-instagram:hover {
+    box-shadow: 0 0 6px rgba(87, 18, 104, 0.5);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    border: 2px solid #550a86;
+    background-image: linear-gradient(to bottom right, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FCAF45, #FFDC80, #777737);
+    background-size: 400% auto;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* -- FOTO DE PERFIL -- */
+.container-foto .foto {
+    max-width: 400px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.container-foto img {
+    width: 100%;
+}
+
+.foto.sombra-interna {
+    background: linear-gradient(to right, #4900A2, #0066FF, #a0ecff);
+    background-size: 180% 180%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
