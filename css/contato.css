@@ -118,7 +118,7 @@ textarea.input {
     border-radius: 22px;
     resize: none;
     overflow-y: auto;
-    width: calc(90% - 20px);
+    width: calc(80% + 20px);
 }
 
 .input-container label {
