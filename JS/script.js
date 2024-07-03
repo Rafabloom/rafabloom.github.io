@@ -178,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     mostrarCertificados();
 
-    // Adicionar evento de redimensionamento para ajustar a exibição quando o tamanho da tela mudar
     window.addEventListener('resize', mostrarCertificados);
 });
 
@@ -276,9 +275,9 @@ const form = document.getElementById('formulario-contato');
 const loader = document.getElementById('loader');
 
 form.addEventListener('submit', async function(event) {
-    event.preventDefault(); // Evita o envio padrão do formulário
+    event.preventDefault();
 
-    loader.style.display = 'block'; // Mostra o loader
+    loader.style.display = 'block'; // Mostrar o loading
 
     const formData = new FormData(form);
 
@@ -300,11 +299,13 @@ form.addEventListener('submit', async function(event) {
             });
             form.reset();
         } else {
+            // Log do status HTTP para diagnóstico
+            console.error('Erro na resposta do servidor:', response.status, response.statusText);
             throw new Error('Erro ao enviar e-mail');
         }
     } catch (error) {
         console.error('Erro ao enviar formulário:', error);
-        loader.style.display = 'none'; // Em caso de erro, também oculta o loader
+        loader.style.display = 'none';
         Swal.fire({
             icon: 'error',
             title: 'Erro ao enviar e-mail',
