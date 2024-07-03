@@ -22,6 +22,26 @@ html.dark-mode, body.dark-mode {
     color: #fff;
 }
 
+/* PERSONALIZAÇÃO DO SCROLL DOS NAVEGADORES */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ce3bff;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #490059;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #65c4ff;
+    cursor: grab;
+}
+
 p {
     font-weight: 400;
 }

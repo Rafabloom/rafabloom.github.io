@@ -277,7 +277,7 @@ const loader = document.getElementById('loader');
 form.addEventListener('submit', async function(event) {
     event.preventDefault();
 
-    loader.style.display = 'block'; // Mostrar o loading
+    loader.style.display = 'block'; // Mostrar o loader
 
     const formData = new FormData(form);
 
@@ -287,7 +287,7 @@ form.addEventListener('submit', async function(event) {
             body: formData
         });
 
-        loader.style.display = 'none'; // Oculta o loader após a resposta
+        loader.style.display = 'none'; // Ocultar o loader após a resposta
 
         if (response.ok) {
             Swal.fire({
@@ -299,13 +299,14 @@ form.addEventListener('submit', async function(event) {
             });
             form.reset();
         } else {
-            // Log do status HTTP para diagnóstico
             console.error('Erro na resposta do servidor:', response.status, response.statusText);
+            // Tratar casos específicos de erro se necessário
             throw new Error('Erro ao enviar e-mail');
         }
     } catch (error) {
         console.error('Erro ao enviar formulário:', error);
-        loader.style.display = 'none';
+        loader.style.display = 'none'; // Ocultar o loader em caso de erro
+        // Exibir mensagem de erro genérica para o usuário
         Swal.fire({
             icon: 'error',
             title: 'Erro ao enviar e-mail',
@@ -314,7 +315,6 @@ form.addEventListener('submit', async function(event) {
         });
     }
 });
-
 
 /* ----- LIMITANDO CARACTERES FORMULÁRIO ----- */
 document.addEventListener('DOMContentLoaded', function() {
