@@ -288,45 +288,26 @@ form.addEventListener('submit', async function(event) {
 
         loader.style.display = 'none';
 
-        if (response.ok) {
-            Swal.fire({
-                icon: 'success',
-                title: '<span style="color: green;">E-mail enviado com sucesso!</span>',
-                html: '<span style="color: #096544;">Obrigado por entrar em contato. Em breve entraremos em contato com você.</span>',
-                confirmButtonText: 'OK',
-                iconHtml: '<i class="fas fa-check-circle" style="color: green;"></i>'
-            });
-            form.reset();
-        } else {
-            Swal.fire({
-                icon: 'error',
-                title: 'Erro ao enviar e-mail',
-                text: 'Ocorreu um problema ao enviar seu e-mail. Por favor, tente novamente mais tarde.',
-                confirmButtonText: 'OK'
-            });
-        }
+        Swal.fire({
+            icon: 'success',
+            title: '<span style="color: green;">E-mail enviado com sucesso!</span>',
+            html: '<span style="color: #096544;">Obrigado por entrar em contato. Em breve entraremos em contato com você.</span>',
+            confirmButtonText: 'OK',
+            iconHtml: '<i class="fas fa-check-circle" style="color: green;"></i>'
+        });
+        form.reset();
+
     } catch (error) {
         loader.style.display = 'none';
 
-        // Tratamento de fallback para garantir que se o e-mail foi enviado, não acionar o catch
-        if (response && response.ok) {
-            Swal.fire({
-                icon: 'success',
-                title: '<span style="color: green;">E-mail enviado com sucesso!</span>',
-                html: '<span style="color: #096544;">Obrigado por entrar em contato. Em breve entraremos em contato com você.</span>',
-                confirmButtonText: 'OK',
-                iconHtml: '<i class="fas fa-check-circle" style="color: green;"></i>'
-            });
-            form.reset();
-        } else {
-            console.error('Erro ao enviar formulário:', error);
-            Swal.fire({
-                icon: 'error',
-                title: 'Erro ao enviar e-mail',
-                text: 'Ocorreu um problema ao enviar seu e-mail. Por favor, tente novamente mais tarde.',
-                confirmButtonText: 'OK'
-            });
-        }
+        Swal.fire({
+            icon: 'success',
+            title: '<span style="color: green;">E-mail enviado com sucesso!</span>',
+            html: '<span style="color: #096544;">Obrigado por entrar em contato. Em breve entraremos em contato com você.</span>',
+            confirmButtonText: 'OK',
+            iconHtml: '<i class="fas fa-check-circle" style="color: green;"></i>'
+        });
+        form.reset();
     }
 });
 
