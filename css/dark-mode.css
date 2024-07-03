@@ -859,6 +859,11 @@ input#darkmode-toggle:checked+.btn-darklight:after {
     box-shadow: 0 0 4px 0 #a0ecff81;
 }
 
+.dark-mode .input:focus + label {
+    color: #A0ECFF;
+    font-weight: 700;
+}
+
 .dark-mode .input-container label {
     color: #fff;
     background-color: #0D2072;

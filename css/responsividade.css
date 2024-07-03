@@ -364,8 +364,8 @@
         background: url(../portifolio-arquivos/livro-light.svg) no-repeat;
         background-size: contain;
         position: absolute;
-        left: -135px;
-        top: 140px;
+        left: -125px;
+        top: 100px;
         opacity: 0.4;
     }
 
@@ -376,7 +376,7 @@
         background-size: contain;
         position: absolute;
         left: -125px;
-        top: 140px;
+        top: 100px;
         opacity: 0.4;
     }
 
