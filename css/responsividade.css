@@ -304,7 +304,7 @@
     .dark-mode .retangulo h2,
     .dark-mode .retangulo-direito h2 {
         font-weight: 700;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         letter-spacing: 0.02em;
         margin-left: 0;
         margin-top: 0;
@@ -722,7 +722,7 @@
     .dark-mode .retangulo h2,
     .dark-mode .retangulo-direito h2 {
         font-weight: 700;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         letter-spacing: 0.02em;
         margin-left: 0;
         margin-top: 0;
@@ -735,7 +735,7 @@
     .dark-mode .retangulo-direito h3 {
         font-style: italic;
         font-weight: 300;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         line-height: 133%;
         letter-spacing: 0.02em;
         padding-left: 0;
@@ -749,7 +749,7 @@
     .dark-mode .coluna ul li,
     .dark-mode .coluna2 ul li {
         list-style: none;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     /* -- SEÇÃO FORMAÇÃO -- */
