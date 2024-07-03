@@ -124,7 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
             numCertificadosVisiveis = 3;
         }
 
-        // Ajustar currentIndex se estiver fora do intervalo válido
         if (currentIndex > certificados.length - numCertificadosVisiveis) {
             currentIndex = Math.max(certificados.length - numCertificadosVisiveis, 0);
         }
@@ -275,7 +274,7 @@ const form = document.getElementById('formulario-contato');
 const loader = document.getElementById('loader');
 
 form.addEventListener('submit', async function(event) {
-    event.preventDefault();
+    event.preventDefault(); 
 
     loader.style.display = 'block';
 
@@ -299,7 +298,6 @@ form.addEventListener('submit', async function(event) {
             });
             form.reset();
         } else {
-            console.error('Erro na resposta do servidor:', response.status, response.statusText);
             throw new Error('Erro ao enviar e-mail');
         }
     } catch (error) {
@@ -313,6 +311,7 @@ form.addEventListener('submit', async function(event) {
         });
     }
 });
+
 
 /* ----- LIMITANDO CARACTERES FORMULÁRIO ----- */
 document.addEventListener('DOMContentLoaded', function() {
