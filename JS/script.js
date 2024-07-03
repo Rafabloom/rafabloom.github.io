@@ -291,7 +291,7 @@ form.addEventListener('submit', async function(event) {
         Swal.fire({
             icon: 'success',
             title: '<span style="color: green;">E-mail enviado com sucesso!</span>',
-            html: '<span style="color: #096544;">Obrigado por entrar em contato. Em breve entraremos em contato com você.</span>',
+            html: '<span style="color: #096544;">Obrigado por entrar em contato. Em breve entrarerei em contato com você.</span>',
             confirmButtonText: 'OK',
             iconHtml: '<i class="fas fa-check-circle" style="color: green;"></i>'
         });
@@ -303,7 +303,7 @@ form.addEventListener('submit', async function(event) {
         Swal.fire({
             icon: 'success',
             title: '<span style="color: green;">E-mail enviado com sucesso!</span>',
-            html: '<span style="color: #096544;">Obrigado por entrar em contato. Em breve entraremos em contato com você.</span>',
+            html: '<span style="color: #096544;">Obrigado por entrar em contato. Em breve entrarerei em contato com você.</span>',
             confirmButtonText: 'OK',
             iconHtml: '<i class="fas fa-check-circle" style="color: green;"></i>'
         });
