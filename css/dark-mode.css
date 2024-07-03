@@ -877,6 +877,7 @@ input#darkmode-toggle:checked+.btn-darklight:after {
 .dark-mode #enviar:hover {
     background-color: #4900A2;
     color: #fff;
+    cursor: pointer;
 }
 
 .dark-mode .whats-contato {

@@ -175,6 +175,7 @@ textarea.input {
     background-color: #06F;
     color: #fff;
     font-weight: bold;
+    cursor: pointer;
 }
 
 #enviar:hover>.fas.fa-paper-plane {
