@@ -271,12 +271,13 @@ inputs.forEach((input) => {
 });
 
 /* ----- ALERTAS FORMULÁRIO CONTATO ----- */
+const form = document.getElementById('formulario-contato');
+const loader = document.getElementById('loader');
+
 form.addEventListener('submit', async function(event) {
     event.preventDefault();
 
-    console.log('Iniciando envio do formulário...');
-
-    loader.style.display = 'block'; // Mostrar o loader
+    loader.style.display = 'block';
 
     const formData = new FormData(form);
 
@@ -286,13 +287,9 @@ form.addEventListener('submit', async function(event) {
             body: formData
         });
 
-        console.log('Resposta recebida:', response);
-
-        loader.style.display = 'none'; // Ocultar o loader após a resposta
+        loader.style.display = 'none';
 
         if (response.ok) {
-            console.log('Resposta OK, e-mail enviado com sucesso!');
-
             Swal.fire({
                 icon: 'success',
                 title: '<span style="color: green;">E-mail enviado com sucesso!</span>',
@@ -300,7 +297,6 @@ form.addEventListener('submit', async function(event) {
                 confirmButtonText: 'OK',
                 iconHtml: '<i class="fas fa-check-circle" style="color: green;"></i>'
             });
-
             form.reset();
         } else {
             console.error('Erro na resposta do servidor:', response.status, response.statusText);
@@ -308,7 +304,7 @@ form.addEventListener('submit', async function(event) {
         }
     } catch (error) {
         console.error('Erro ao enviar formulário:', error);
-        loader.style.display = 'none'; // Ocultar o loader em caso de erro
+        loader.style.display = 'none';
         Swal.fire({
             icon: 'error',
             title: 'Erro ao enviar e-mail',
