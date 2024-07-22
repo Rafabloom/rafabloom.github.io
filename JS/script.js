@@ -181,13 +181,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* ----- SEÇÃO FORMAÇÃO - BALÃO DE FALA PROGRESSO ----- */
-function showBalaoFala() {
-    const balaoFala = document.querySelector('.balao-fala');
+function showBalaoFala(event) {
+    const barraProgresso = event.currentTarget;
+    const balaoFala = barraProgresso.parentNode.querySelector('.balao-fala');
     balaoFala.style.display = 'block';
 }
 
-function hideBalaoFala() {
-    const balaoFala = document.querySelector('.balao-fala');
+function hideBalaoFala(event) {
+    const barraProgresso = event.currentTarget;
+    const balaoFala = barraProgresso.parentNode.querySelector('.balao-fala');
     balaoFala.style.display = 'none';
 }
 

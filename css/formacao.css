@@ -55,6 +55,7 @@
     margin: 0 10px;
     flex: 0 0 auto;
     text-align: center;
+    position: relative;
 }
 
 .certificados {
